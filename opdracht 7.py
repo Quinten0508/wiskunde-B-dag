@@ -3,8 +3,8 @@ import array
 from tqdm import tqdm
 
 n=1
-lowerBound=-100000000
-upperBound=100000000
+lowerBound=-1000000
+upperBound=1000000
 
 list_x=[]    # definieert (en leegt) lijsten
 list_a=[]
