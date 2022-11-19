@@ -36,4 +36,4 @@ for z in range(len(index)):   # bij hoge bounds zijn er meerdere waardes die het
     print(" uitkomst: " + str(closest))
     print(" x-waarde: " + str(list_x[good]))
     print(" y-waarde: " + str(list_a[good]))
-print( "------------------------------")    
+print( "------------------------------")
