@@ -1,10 +1,12 @@
 import math
 import array
-from tqdm import tqdm
+# start de timer voor een race tegen Rust:
+# import time
+# start_time = time.time()
 
 n=1
-lowerBound=-100000000
-upperBound=100000000
+lowerBound=-10000000
+upperBound=10000000
 
 list_x=[]    # definieert (en leegt) lijsten
 list_a=[]
@@ -37,3 +39,6 @@ for z in range(len(index)):   # bij hoge bounds zijn er meerdere waardes die het
     print(" x-waarde: " + str(list_x[good]))
     print(" y-waarde: " + str(list_a[good]))
 print( "------------------------------")
+
+# Beeindigt de timer:
+# print("Dit programma heeft " + str(time.time() - start_time) + " seconden geduurd")

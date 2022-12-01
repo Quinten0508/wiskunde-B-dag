@@ -1,10 +1,14 @@
 import math
 import array
 from tqdm import tqdm
+# start de timer voor een race tegen Rust:
+# import time
+# start_time = time.time()
+
 
 n=1
-lowerBound=-1000000
-upperBound=1000000
+lowerBound=-10000000
+upperBound=10000000
 
 list_x=[]    # definieert (en leegt) lijsten
 list_a=[]
@@ -12,9 +16,9 @@ list_v=[]
 
 print("Waardes tussen " + str(lowerBound) + " en " + str(upperBound) + " aan het berekenen...")
 for x in tqdm(range(lowerBound,upperBound)):
-    y=(1-5*x)/math.pi
+    y =(1-5*x)/math.pi
     a = int(y)
-    v=5*x+a*math.pi
+    v = 5*x+a*math.pi
     list_x.append(x)    # voegt alle waardes van x, a en v binnen het gegeven bereik toe aan de lijsten
     list_a.append(a)
     list_v.append(v)
@@ -37,3 +41,6 @@ for z in range(len(index)):   # bij hoge bounds zijn er meerdere waardes die het
     print(" x-waarde: " + str(list_x[good]))
     print(" y-waarde: " + str(list_a[good]))
 print( "------------------------------")    
+
+# Beeindigt de timer:
+# print("Dit programma heeft " + str(time.time() - start_time) + " seconden geduurd")
