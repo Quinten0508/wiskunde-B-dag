@@ -8,9 +8,10 @@ fn main () {
     let n = 1 as f64;
 
     println!("Voer het totaal aantal iteraties in.");
+    println!("(Aangeraden: 1 000 000 000 > waarde > 0)");
     let mut iterations = String::new();
-    io::stdin().read_line(&mut iterations).expect("Failed to read line");
-    let mut iterations: i64 = iterations.trim().parse().expect("Please type a number!");
+    io::stdin().read_line(&mut iterations).expect("Kan input niet lezen");
+    let mut iterations: i64 = iterations.trim().parse().expect("Voer een nummer in!");
 
     // Waarschuwing als iterations > 10000000
     if iterations > 100_000_000 {
@@ -18,7 +19,7 @@ fn main () {
         println!("Nieuwe waarde invoeren? (Y/n)");
 
         let mut answer = String::new();
-        io::stdin().read_line(&mut answer).expect("Failed to read line");
+        io::stdin().read_line(&mut answer).expect("Kan input niet lezen");
         let answer = answer.trim().to_lowercase();
 
         match answer.as_str() {
@@ -28,8 +29,8 @@ fn main () {
             "y" | _ => {
                 println!("Voer een nieuwe waarde in:");
                 let mut new_iterations = String::new();
-                io::stdin().read_line(&mut new_iterations).expect("Failed to read line");
-                let new_iterations: i64 = new_iterations.trim().parse().expect("Please type a number!");
+                io::stdin().read_line(&mut new_iterations).expect("Kan input niet lezen");
+                let new_iterations: i64 = new_iterations.trim().parse().expect("Voer een nummer in!");
                 iterations = new_iterations;
             }
         }
